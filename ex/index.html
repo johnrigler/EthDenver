@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src=../lib/emitter.js></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+</head>
+	<div id="bounty"></div>
+
+
+	<a href="chrome/chrome-ext-mv3-20230308.zip">Download Chrome Extension 20230308</a>
+
+<script id="message2" type="message/global">
+  console.log("test");
+</script>
+<span class="observable" id="outerMesage">
+<span id="message" style="display:none"></span>
+</span>
+<button style="display:none" id="downloadButton"></button>
+</html>
+
+<script>
+   downloadButton = document.getElementById("downloadButton")
+   document.getElementById("message").addEventListener('update',() => { console.log("x") } )
+
+   var observables = document.querySelector('.observable');
+   var payload;
+
+
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    payload =  JSON.parse(mutation.target.innerHTML);
+    console.log(payload);
+  });
+});
+
+var config = {characterData: true, subtree: true, childList:true };
+observer.observe(observables, config);
+
+downloadButton.click()
+
+
+</script>

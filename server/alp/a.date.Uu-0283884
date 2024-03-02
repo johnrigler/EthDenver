@@ -1,0 +1,4 @@
+a.date.Uu () 
+{ 
+    date "+%U%u"
+}

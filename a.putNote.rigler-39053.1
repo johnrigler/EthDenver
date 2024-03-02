@@ -1,0 +1,8 @@
+a.putNote.rigler () 
+{ 
+    URL=https://rigler.org/easyBase/server/notepad.php;
+    dd of=$$;
+    echo "adfafasasfasfasfdasf";
+    curl $URL -d "body='`cat $$`'&name='$1'";
+    rm $$
+}

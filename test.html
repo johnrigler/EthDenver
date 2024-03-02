@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<script src='lib/ethers-6.6.0.umd.min.js'></script>
+  </head>
+
+  <body>
+    <div id="body"></div> 
+  </body>
+
+<script>
+
+/*
+This script simply calls a smart contract which returns a string of data.
+       It then evalues that string and begins a process that can be quite
+       elaborate. The first argument passed on the command line is the account
+       to feed into the contract. Therefore, each account is able to function 
+       as an entire discreet solution. The body of the smart contract can be 
+       found at:
+
+https://polygonscan.com/address/0x0bc73b97f777d4580c900485a2a00c6aafeed88c#code
+
+The contract can be re-deployed to a different address by using the online 
+       remix tool. Most likely, you would want to change the "easyBase"
+       option below to reflect the new contract address. You would also
+       want to change the default account value to reflect the creator of
+       the contract.
+
+Either you are experiencing this code hosted as a traditional website or
+       you are visiting following base url:
+
+https://ipfs.io/ipfs/$CID
+
+The CID value above will reflect this entire solution and would change when
+       any bit of this code changes. While this solution may seem to be 
+       "too simple", I believe that it is quite useful.
+
+Cheers
+*/
+
+
+easyBase="0x0BC73b97F777D4580c900485a2A00c6AAfeed88C"
+
+abi= [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "body",
+				"type": "string"
+			}
+		],
+		"name": "mapPayload",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "payload",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+
+const polygon = ethers.getDefaultProvider(137)
+const contract = new ethers.Contract(easyBase, abi, polygon);
+
+if(window.location.search.substr(1,2) == '0x')
+	account=window.location.search.substr(1,42) 
+	else
+	account='0x36EFec6C52efb2807b2BA6a10a2a03939Cb29A4C';
+
+contract.payload(account).then( x => eval(x))
+
+</script>

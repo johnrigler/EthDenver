@@ -1,0 +1,8 @@
+a.proc () 
+{ 
+    web="/home2/rigler/public_html";
+    vim $web/child_index.php;
+    dte=`date '+%s'`;
+    sed "s/KLUDGE/$dte/" $web/child_index.php | php > index.html;
+    vim files.txt
+}

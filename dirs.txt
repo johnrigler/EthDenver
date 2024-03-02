@@ -1,0 +1,9 @@
+audio/
+eval/
+freeTalk/
+icons/
+images/
+lib/
+lib-articulated/
+server/
+typescript/

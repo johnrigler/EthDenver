@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+  <head>
+        <script src='lib/ethers-6.6.0.umd.min.js'></script>
+        <script src='lib/davidshimjs-qrcodejs-04f46c6/qrcode.min.js'></script>
+        <script src='lib/html5-qrcode/minified/html5-qrcode.min.js'></script>
+        <script src='lib/base64js.min.js'></script>
+  </head>
+</html>
+<script>
+
+// var easyBase;
+
+var files;
+var dirs;
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+
+/* evaluate local file as javaScript */
+if(evalFile = urlSearchParams.get('evalFile'))
+   fetch(evalFile , { cache: "no-cache" }).then(x => x.text()).then
+        (x => eval(x))
+else
+setTimeout(() => { showFileButtons(); } , "1000");
+      
+   console.log(evalFile)
+
+/* Add mock IPFS filesystem, files written previously with php  */
+
+Promise.all([
+  fetch('files.txt' , {cache: "no-cache"}).then(x => x.text()),
+  fetch('dirs.txt' , {cache: "no-cache"}).then(x => x.text()),
+  fetch('eval.txt' , {cache: "no-cache"}).then(x => x.text())
+]).then(([files,dirs,evals]) => {
+  lsFiles = files.split("\n");
+  lsDirs = dirs.split("\n");
+  lsEvals = evals.split("\n");
+/*
+  middle.innerHTML += '<img src="icons/dir.gif" alt="[DIR]">'
+*/
+
+arrayWithElements = new Array();
+buttonPush = "";
+buttonTags = "";
+
+myClickedElement = ""
+
+clickListener = function(e) 
+{   
+    var clickedElement=(window.event)
+                        ? window.event.srcElement
+                        : e.target,
+        tags=document.getElementsByTagName(clickedElement.tagName);
+    buttonTags = tags;
+  //  console.log(clickedElement)
+    if(clickedElement.id.split(".").length === 2)
+      {
+  //  console.log(clickedElement.id + clickedElement.id.split(".").length + ' ' + clickedElement.name);
+
+    for(var i=0;i<tags.length;++i)
+      if(tags[i]==clickedElement)
+        fetch( tags[i].name, { cache:"no-cache" } ).then(
+          x => x.text()).then(
+          x => eval(x))
+       }
+}
+
+document.onclick = clickListener;
+//////////////////////////////////
+  lsEvals.forEach( x => {
+     if(x.length != 0)
+     {
+     file = `eval/${x}`;
+     console.log(file);
+     fetch(file).then
+        ( y => y.text()).then
+             ( z => eval(z))
+     }
+ //   console.log(x);
+      });
+///////////////////////////////////
+
+a.utils.toHTML = function toHTML( t,wrap ) { 
+
+var includeWrap = "";
+if(wrap)
+  if(wrap.length > 0)
+     includeWrap = "<" + wrap + ">";
+
+return includeWrap + t.toString()
+//          .replace(/"/g, "&#34")
+          .replace(/'/g, "&#39")
+          .replace(/</g, "&#60")
+          .replace(/>/g, "&#62") 
+          .replace(/`/g, "&#96") + includeWrap; 
+ };
+
+f.middle = function( t,wrap ) { middle.innerHTML = a.utils.toHTML(t,wrap); }
+f.footer = function( t,wrap ) { footer.innerHTML = a.utils.toHTML(t,wrap); }
+
+f.utils.LoadCSS = function LoadCSS( cssURL ) {
+
+    // 'cssURL' is the stylesheet's URL, i.e. /css/styles.css
+
+    return new Promise( function( resolve, reject ) {
+
+        var link = document.createElement( 'link' );
+
+        link.rel  = 'stylesheet';
+
+        link.href = cssURL;
+
+        document.head.appendChild( link );
+
+        link.onload = function() { 
+
+            resolve(); 
+
+            console.log( 'CSS has loaded!' ); 
+        };
+    } );
+}
+
+showFileButtons = function() {
+
+  lsFiles.forEach( x => {  
+      if(x.split('.')[1] == "js")
+         middle.innerHTML += `<br><button tag=${x} id=${x} name=${x} >${x}</button>`;
+      else
+         middle.innerHTML += "<br><a href=" +  x + ">" + x + "</a>";
+      });
+  middle.innerHTML += "<hr>";
+
+  lsEvals.forEach( x => {
+     if(x.length != 0)
+     {
+     file = `eval/${x}`;
+     console.log(file);
+     fetch(file, { cache:"no-cache" }).then
+        ( y => y.text()).then
+             ( z => eval(z))
+     }
+ //   console.log(x);
+      });
+
+} 
+
+
+});
+
+a = new Array();
+a.urlSearchParams = urlSearchParams;
+a.utils = new Array();
+a.help = function() {
+alert("(heading (body target middle footer))")
+
+}
+
+function evalText() { eval(toEval.value) }
+
+</script>
+<html>
+ <head>
+  <title>Index of /</title>
+ </head>
+<div id=heading name=heading></div>
+<div id=body name=body>
+<div id=target name=target></div>
+<div id=middle name=middle>
+
+<!--
+<iframe width=900px height=800px 
+        src="inFrame.html?evalFile=start.js" 
+        title="Introducing Gomez...">
+</iframe> -->
+
+
+
+
+
+
+</div>
+<div id=footer name=footer></div>
+<script>
+
+home = function(home) {
+ heading.innerHTML = `
+	<button style='font-size:40px' onclick='home()'>Home</button>
+        <span   style='font-size:60px'>    </span>
+	<button style='font-size:40px' id='buttonForeverWall'>
+                      Forever Wall</button>
+        <button style='font-size:40px' onclick='Whitepaper()'>
+                      Whitepaper</button>`
+
+
+ body.innerHTML = "<div id=target></div><div id=middle></div><div id=footer></div>"
+ showFileButtons(); 
+}
+
+home();
+
+foreverWall = function foreverWall() { 
+    size=gomez.polygon.fullQuery.result.length
+    if(size < 1)
+        {
+        for( x = 0; x < size; x++ )
+            {
+            middle.innerHTML += "<hr>" + x;
+            }
+        }
+    };
+
+// document.onclick = clickListener; 
+
+
+
+
+</script>
+

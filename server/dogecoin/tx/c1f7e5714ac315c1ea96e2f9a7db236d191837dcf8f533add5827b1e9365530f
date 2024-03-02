@@ -1,0 +1,52 @@
+{
+  "hex": "010000000166c579ff2edb4d290a1499a16fca4ed35170574b35c2a0b157c11a5f356dba01010000006b483045022100c2baab57e64e10ce75dc103ade2ea52604a351b40760be4436b363ff31af5d8702207001fe7fbbfa53783b740c7cadd535baa5691b0ab8c77828b055a17598f28752012103f790de04cac44770d64d2e6d7b3b51fde44a9456c5bc9b0b50308e66b6a8ad67ffffffff0200e1f5050000000017a9140942824cd9fe254e13e3ae3e1c5e82839c71cbe48788ebf62d010000001976a914a2583043392db48d8b7406c3921f767c66b0ecd988ac00000000",
+  "txid": "c1f7e5714ac315c1ea96e2f9a7db236d191837dcf8f533add5827b1e9365530f",
+  "hash": "c1f7e5714ac315c1ea96e2f9a7db236d191837dcf8f533add5827b1e9365530f",
+  "size": 224,
+  "vsize": 224,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "01ba6d355f1ac157b1a0c2354b577051d34eca6fa199140a294ddb2eff79c566",
+      "vout": 1,
+      "scriptSig": {
+        "asm": "3045022100c2baab57e64e10ce75dc103ade2ea52604a351b40760be4436b363ff31af5d8702207001fe7fbbfa53783b740c7cadd535baa5691b0ab8c77828b055a17598f28752[ALL] 03f790de04cac44770d64d2e6d7b3b51fde44a9456c5bc9b0b50308e66b6a8ad67",
+        "hex": "483045022100c2baab57e64e10ce75dc103ade2ea52604a351b40760be4436b363ff31af5d8702207001fe7fbbfa53783b740c7cadd535baa5691b0ab8c77828b055a17598f28752012103f790de04cac44770d64d2e6d7b3b51fde44a9456c5bc9b0b50308e66b6a8ad67"
+      },
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 1.00000000,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_HASH160 0942824cd9fe254e13e3ae3e1c5e82839c71cbe4 OP_EQUAL",
+        "hex": "a9140942824cd9fe254e13e3ae3e1c5e82839c71cbe487",
+        "reqSigs": 1,
+        "type": "scripthash",
+        "addresses": [
+          "9sHERExiSxTHExWiNDxHAVEzzzzzUwytDv"
+        ]
+      }
+    },
+    {
+      "value": 50.66124168,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 a2583043392db48d8b7406c3921f767c66b0ecd9 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914a2583043392db48d8b7406c3921f767c66b0ecd988ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "DKwVenG4u9pdoPqEYpAw7s8KwfNdnXzFnW"
+        ]
+      }
+    }
+  ],
+  "blockhash": "d2daedd08016037a20fa581ffd9d7e27fcf38d6e4c6af38e037d21a0372ec1f1",
+  "confirmations": 1571200,
+  "time": 1571584776,
+  "blocktime": 1571584776
+}

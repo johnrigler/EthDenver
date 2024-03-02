@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="1200" 
+     fill="none" stroke="white" 
+     stroke-width="2" stroke-dasharray="4" stroke-linecap="round"> 
+
+  <line x1="248" y1="128" x2="1336" y2="128" stroke="magenta" />
+  <line x1="1336" y1="128" x2="1336" y2="926" stroke="magenta" />
+  <line x1="1336" y1="926" x2="248" y2="926"  stroke="magenta" />
+  <line x1="248" y1="926" x2="248" y2="128"   stroke="magenta" />
+
+  <line x1="268" y1="148" x2="1316" y2="148"  stroke="salmon" />
+  <line x1="1316" y1="148" x2="1316" y2="906" stroke="salmon" />
+  <line x1="1316" y1="906" x2="268" y2="906"  stroke="salmon" />
+  <line x1="268" y1="906" x2="268" y2="148"   stroke="salmon" />
+</svg>

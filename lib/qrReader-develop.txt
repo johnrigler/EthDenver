@@ -1,0 +1,33 @@
+I need a reader that will tell us if a QR code is rotated. This data is usually lost in
+the detection process. Here is where the code would likely need to change:
+
+
+https://github.com/zxing-js/library/blob/master/src/core/aztec/detector/Detector.ts
+
+Line 214:
+
+for (let shift = 0; shift < 4; shift++) {
+            if (Integer.bitCount(cornerBits ^ this.EXPECTED_CORNER_BITS[shift]) <= 2) {
+                return shift;
+            }
+        }
+
+This "rotation factor" will make the code significantly safer by increasing 
+the level of randomness.
+
+From Keir:
+
+You're looking at n-choose-k with the order being important (you don't just chuck them in a bag). Check out pages 160-164 of Move Over Brokers if you want a detailed explanation, but here goes:
+
+In general, for the first choice you have n, then n-1, and so on down to n-k+1. And you multiply to get the total number of choices. So for 9 choose 4, it's 9*8*7*6, or more generally 9!/(9-4)!, which is 3024.
+
+If each sticker has two sides, then you've chosen one of 3024 possible stickers. Now you have 2*2*2*2 ways of selecting the side of each sticker. So it's 16*3024, or 48384 possible combinations.
+
+https://www.linkedin.com/feed/update/urn:li:activity:7131666624620761088/
+
+
+54 double-sided and rotating, pick any 8 and you get 1.7 * 10^17
+
+https://math.answers.com/algebra/What_is_10_to_the_17th_power_called
+
+100 Quadrillion

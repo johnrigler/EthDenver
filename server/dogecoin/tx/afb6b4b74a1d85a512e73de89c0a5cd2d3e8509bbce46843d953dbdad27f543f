@@ -1,0 +1,52 @@
+{
+  "hex": "01000000012b7d7eeac2d9f587bd0ef06d2b8fd45431c81fb6f8cdf010fd8f0361218ad10b000000006b483045022100d730125d6f994d82514536223e5f3a9ab11a855be277f8e2c4cfbd10c1661ece02204a428ad471a47100c626097ea13fb121cd2eba74b3d92527b7686bd7562f2dea01210211b2e6e56a5d998e70420cc839b824755e8ba64c175fc7ec6649b92a5bb4a650feffffff020c7cf605000000001976a91455b27d70fb35feb9d38c1276fb9ec514ca01115b88acfb94e111000000001976a91457bc24a8e9a8483de72f98d0ca4914b965c8037588ac3b933300",
+  "txid": "afb6b4b74a1d85a512e73de89c0a5cd2d3e8509bbce46843d953dbdad27f543f",
+  "hash": "afb6b4b74a1d85a512e73de89c0a5cd2d3e8509bbce46843d953dbdad27f543f",
+  "size": 226,
+  "vsize": 226,
+  "version": 1,
+  "locktime": 3380027,
+  "vin": [
+    {
+      "txid": "0bd18a2161038ffd10f0cdf8b61fc83154d48f2b6df00ebd87f5d9c2ea7e7d2b",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "3045022100d730125d6f994d82514536223e5f3a9ab11a855be277f8e2c4cfbd10c1661ece02204a428ad471a47100c626097ea13fb121cd2eba74b3d92527b7686bd7562f2dea[ALL] 0211b2e6e56a5d998e70420cc839b824755e8ba64c175fc7ec6649b92a5bb4a650",
+        "hex": "483045022100d730125d6f994d82514536223e5f3a9ab11a855be277f8e2c4cfbd10c1661ece02204a428ad471a47100c626097ea13fb121cd2eba74b3d92527b7686bd7562f2dea01210211b2e6e56a5d998e70420cc839b824755e8ba64c175fc7ec6649b92a5bb4a650"
+      },
+      "sequence": 4294967294
+    }
+  ],
+  "vout": [
+    {
+      "value": 1.00039692,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 55b27d70fb35feb9d38c1276fb9ec514ca01115b OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91455b27d70fb35feb9d38c1276fb9ec514ca01115b88ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "DCxDoGSTEREGGHUNTzzzzzzzzzzzZGCmTw"
+        ]
+      }
+    },
+    {
+      "value": 2.99996411,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 57bc24a8e9a8483de72f98d0ca4914b965c80375 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91457bc24a8e9a8483de72f98d0ca4914b965c8037588ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "DD8ziNDNfs1nwhTEMuvBnKLYKY3xptEmvn"
+        ]
+      }
+    }
+  ],
+  "blockhash": "942b2809df062b5931f0918bfc245e60f6435121ec090f4b1470ff3d16951135",
+  "confirmations": 1120602,
+  "time": 1598979862,
+  "blocktime": 1598979862
+}

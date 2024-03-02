@@ -1,0 +1,1 @@
+fetch(https://gist.githubusercontent.com/RaynZayd/6c0d69c3270285a036b2161cd002e236/raw/ab1c86424e25f23df609bee9c0c14fdb0cceb100/Magic%2520Eight%2520Ball%2520JavaScript%2520Project.js).then( x => console.log(x))

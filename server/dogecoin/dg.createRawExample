@@ -1,0 +1,1 @@
+dogecoin-cli createrawtransaction '[{"txid":"eae83654a91eff71f57cad13b20fdfcbd03fd343f87a471d766320ac0fee0744","vout":1,"amount":20.00039692}]' "{\"$1\":0.001132}"
