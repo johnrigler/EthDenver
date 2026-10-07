@@ -10,6 +10,8 @@ The proposed public demonstration connects a Denver bar with the ETHDenver hacke
 
 An optional LoRa radio link would carry signed reports from the bar to a receiver at the convention. Participants at both locations could watch the same game and inspect the same signed history. Albuquerque teams can build and test the equipment beforehand, and can join remotely if travel is impractical.
 
+A dedicated **Nob Hill Darts** page will be the public spectator interface, optimized for this board and its games. Anyone, anywhere can follow the game and revisit recorded results without creating an account or connecting a wallet. The page will share Chisel/Mogwai's record-reading and verification machinery. A spectator who wants to sign or write a contribution can deliberately open Chisel with the current board/game context.
+
 ## Ways to participate
 
 - Identify, donate, or lend a suitable electronic soft-tip dartboard and help document its input interface.

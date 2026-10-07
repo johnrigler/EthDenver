@@ -110,6 +110,37 @@ Use Chisel's identity and human-readable index conventions to find the board and
 
 Batch per-dart logs later if measurement, payload size, and transaction costs justify it. The initial build can publish a match result while keeping detailed observations available for inspection.
 
+## Nob Hill Darts: the public page
+
+The main spectator destination is a dedicated **Nob Hill Darts** page: a portal view optimized for this board, this venue, and its game sessions. Someone in the bar, on the ETHDenver hacker floor, in Albuquerque, or elsewhere in the world opens the same page and follows the same game. Viewing requires no account, wallet connection, signing key, or cryptocurrency.
+
+The first screen should show the current game, player aliases, score, recent throws/results, connection freshness, and prior games. Readers can inspect a recorded game's source and verification/publication status when useful. Keep these details understandable in the context of watching darts.
+
+| Component | Responsibility |
+| --- | --- |
+| Dartboard | Register physical inputs, maintain the game, and sign reports with its enrolled device identity. |
+| Relay and Chisel publisher | Transport intact signed reports, expose a public read feed, and publish/anchor records through Chisel's transaction tools. |
+| Nob Hill Darts page | Read reports and history, resolve board/session identity, verify records, and display the game to spectators. |
+| Chisel interactive interface | Provide optional identity, signing, writing, and publication workflows for a viewer who chooses to contribute. |
+
+### Shared machinery and a dedicated interface
+
+Treat the page as a specialized portal client over the Chisel/Mogwai record model. Reuse the applicable identity resolution, record queries/decoding, and verification helpers. Keep the dart-specific scoring presentation and venue/session selection in the dedicated page. When implementing, inspect the current code and extract the needed reusable helpers; this document does not claim those helpers already have a stable exported API.
+
+The board's publication path and optional human interaction both use Chisel. Spectators can read the resulting records through the dedicated page without operating the general-purpose Chisel interface. Public record-reading/verification code should not require private keys or a wallet prompt.
+
+Provide an optional **Open in Chisel** action for a person who wants to sign a message, write a contribution, or inspect/use the publication tools. Carry the board identity, selected chain, and session/artifact reference into that workflow through a documented handoff. Returning from it should restore the selected game. Signing and publishing controls belong in that intentional interaction path.
+
+### Live events and persistent records
+
+Distribute the viewer itself as static vanilla HTML/CSS/JavaScript suitable for IPFS. Supply current signed events through a public read endpoint exposed by the relay, and retrieve historical/anchored records through the configured ledger/IPFS readers. The static app package and the changing game feed are separate resources.
+
+Use one board/session identity and stable event IDs across the live feed and confirmed history. Merge the streams without counting a report twice when it becomes anchored. Track sequence and freshness, reconnect/recover after a gap, and show the latest known state when reception stops.
+
+The proposed first milestone publishes a completed-game artifact while a read feed carries the live game. A live throw is therefore not necessarily already a confirmed ledger entry. Global viewers receive reports as connectivity allows; preserve event order and expose freshness rather than promising identical arrival times.
+
+Allow a viewer to return after the event and select an earlier game from the same board's history. This page should remain useful as the bar's game viewer after convention week.
+
 ## Albuquerque participation
 
 Invite small teams to contribute independently:
@@ -134,7 +165,7 @@ Existing arcade and pinball machines can later use the same device-identity/even
 2. Read and log physical target contacts; verify sector/multiplier mapping and correct duplicate contact handling.
 3. Generate/enroll a reporting identity and produce one signed completed-game artifact; verify it independently.
 4. Publish one artifact or its retained IPFS reference through Chisel; retrieve it by the board identity from another device.
-5. Display the same session at the bar and hacker-floor receiver, distinguishing live reception from confirmed publication.
+5. Build the Nob Hill Darts page for public spectators at the bar, hacker-floor receiver, and anywhere online; distinguish live reception from confirmed publication, and provide an optional contextual handoff to Chisel for writing/signing.
 6. Add a measured LoRa route as an optional extension. Keep the working local/Internet path available if the radio route fails.
 7. Run an Albuquerque build session, then arrange a Denver demonstration and follow-up with the local venue.
 
