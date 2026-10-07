@@ -2,6 +2,12 @@
 
 Planning note: 2026-10-07. This is a proposed build and independently organized outside event. Hardware, venue arrangements, convention-floor access, and event dates are not yet established.
 
+## Project organization
+
+Nerd Coffee LLC is the organizing company. Shannon is the project manager and coordinates scope, owners, build sessions, schedule, and event arrangements. John Rigler contributes Chisel development and Denver outreach, including up to one week at the proposed demonstration. Hardware and venue partners remain to be arranged.
+
+GitHub coordination is a pending task: establish the company organization, identify Shannon's GitHub account, grant project access, and transfer the repository once the destination is ready. The current repository remains under John's account. See the [coordination plan](github-coordination.md).
+
 ## The physical connection
 
 John plans to spend up to one week in Denver, moving between the ETHDenver hacker floor and a local bar. Interested builders can join Denver regulars in the bar, and both locations can display the same activity. The hacker floor recruits collaborators and hosts a receiver/viewer; the bar hosts the game.

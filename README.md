@@ -1,8 +1,10 @@
 # EthDenver
 
-## Nob Hill Darts: a Chisel project
+## Nob Hill Darts: a Nerd Coffee LLC project using Chisel
 
 An electronic soft-tip dartboard reports its own games through Chisel. People at a Denver bar, on the ETHDenver hacker floor, and anywhere online can follow the same game through a dedicated **Nob Hill Darts** page and return to its recorded history afterward.
+
+**Organizing company:** Nerd Coffee LLC. **Project manager:** Shannon. **Chisel development and Denver outreach:** John Rigler.
 
 The project gives visiting builders and Denver regulars a physical activity to share. Albuquerque colleges, hackerspaces, and makerspaces can help build and test the equipment before the Denver demonstration.
 
@@ -49,7 +51,7 @@ LoRa is an optional later demonstration between the bar and a convention receive
 
 ## Tasks and milestone gates
 
-Task 1 establishes what the project is and gives a project manager a pitch they can use to organize the build. Subsequent tasks advance when their evidence is available. Dates and spending estimates follow the hardware inventory and assignment of owners.
+Task 1 establishes the Nerd Coffee LLC project and gives Shannon a pitch she can use to organize the build. Subsequent tasks advance when their evidence is available. Dates and spending estimates follow the hardware inventory and assignment of owners.
 
 | Task | Deliverable | Gate for moving forward |
 | --- | --- | --- |
@@ -65,14 +67,23 @@ Track implementation in [issue #1](https://github.com/johnrigler/EthDenver/issue
 
 ## What the project manager coordinates
 
-John is the project coordinator. The build needs named owners for hardware/embedded work, device signatures and Chisel integration, the public page, and venue operations. People can cover more than one role.
+Shannon is the project manager for Nerd Coffee LLC. John contributes Chisel development and Denver outreach. Shannon coordinates the work and assigns the remaining owners. The build needs named owners for hardware/embedded work, device signatures and Chisel integration, the public page, and venue operations. People can cover more than one role.
 
 The first resource request is a suitable board, a Pi or controller, compatible input electronics and power, an enclosure, test access, and a small build group. The project manager inventories available equipment, estimates remaining purchases and transaction/retention costs, assigns owners, and sets the schedule. Radio parts enter the budget only if the team chooses that extension.
 
 Potential Albuquerque collaborators include CNM/FUSE, Quelab, and interested UNM students or makerspace participants. These are candidates to approach. No organization or venue has committed, and the invitation draft does not mean outreach has been sent.
 
+## Nerd Coffee LLC and GitHub coordination
+
+Nerd Coffee LLC is the organizing company for this project. Its approach draws on the community-building work John explored through Hackers and Slackers in Austin: people gathering around shared technical projects.
+
+The repository currently lives at `johnrigler/EthDenver`. Company attribution in these materials does not transfer GitHub ownership. The next coordination task is to establish a GitHub organization for Nerd Coffee LLC, identify Shannon's own GitHub account, grant her project access, and transfer this repository when the destination and its settings are ready. No organization, account, invitation, or transfer is claimed as completed.
+
+Use the [GitHub coordination plan](docs/github-coordination.md) for the account setup and handoff.
+
 ## Project documents
 
+- [GitHub coordination plan](docs/github-coordination.md)
 - [Project-manager pitch outline and speaking notes](docs/project-manager-pitch.md)
 - [Technical and outside-event pilot plan](docs/nob-hill-dartboard-pilot.md)
 - [College and makerspace invitation draft](docs/college-makerspace-invitation.md)

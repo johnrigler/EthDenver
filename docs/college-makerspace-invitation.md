@@ -2,7 +2,7 @@
 
 Draft for Albuquerque colleges, hackerspaces, and makerspaces. Prepared 2026-10-07. Proposed collaborators and venues have not committed; this is material for outreach and project coordination.
 
-We are inviting students, electronics builders, programmers, radio experimenters, and fabrication teams to help build an electronic soft-tip dartboard that reports its own game events through Chisel.
+Nerd Coffee LLC is inviting students, electronics builders, programmers, radio experimenters, and fabrication teams to help build an electronic soft-tip dartboard that reports its own game events through Chisel.
 
 The board will have its own public identity and a reporting key within its electronics. It will register target hits, maintain the local game, and sign records that other people can inspect. A Chisel publisher will put completed-game artifacts, or references to retained artifacts, onto a public ledger.
 
@@ -32,7 +32,11 @@ Potential starting points include [CNM/FUSE Makerspace](https://www.cnm.edu/loca
 
 ## Coordination
 
-Project coordinator: John Rigler.
+Organizing company: Nerd Coffee LLC.
+
+Project manager: Shannon.
+
+Chisel development and Denver outreach: John Rigler.
 
 Use [johnrigler/EthDenver issues](https://github.com/johnrigler/EthDenver/issues) to offer a board, a build-session venue, an area of expertise, or a small team. Include what is available and what part you want to work on.
 

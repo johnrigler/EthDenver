@@ -1,14 +1,14 @@
 # Nob Hill Darts: project-manager pitch
 
-Prepared for John Rigler, 7 October 2026. This is the content and speaking outline for the accompanying PowerPoint. Audience: a project manager coordinating a small hardware/web build and an independently organized ETHDenver outside event.
+A Nerd Coffee LLC project. Project manager: Shannon. Chisel development and Denver outreach: John Rigler. Updated 7 October 2026. This is the content and speaking outline for the accompanying PowerPoint, prepared for Shannon to coordinate a small hardware/web build and an independently organized ETHDenver outside event.
 
 The proposal asks for a bounded prototype and named owners. It does not assume a committed venue, partner, budget, event date, or implementation. Concept artwork in the PowerPoint illustrates the proposed object and workbench rather than actual project work.
 
 ## 1. Nob Hill Darts
 
-**On the slide:** A dartboard that reports its own games through Chisel. Project-manager proposal, John Rigler, October 2026.
+**On the slide:** A dartboard that reports its own games through Chisel. Nerd Coffee LLC. Project manager: Shannon. October 2026.
 
-**Speaking notes:** Start with the ordinary game. Plastic-tipped darts hit an electronic board. The board keeps its own identity and signs its results. A focused public page lets people watch and return to the record. The first request is help organizing one working prototype.
+**Speaking notes:** Start with the ordinary game. Plastic-tipped darts hit an electronic board. The board keeps its own identity and signs its results. A focused public page lets people watch and return to the record. Nerd Coffee LLC organizes the project. Shannon manages the build, while John contributes Chisel development and Denver outreach. The first request is help organizing one working prototype.
 
 ## 2. A shared game in Denver
 
@@ -34,17 +34,17 @@ The proposal asks for a bounded prototype and named owners. It does not assume a
 
 **Speaking notes:** Select the board and scoring rules first. Use a Pi or controller with a recoverable local log. Publish the completed-game artifact through Chisel, directly if supported or by a retained IPFS reference. A live feed can show throws before confirmation. Add stable event IDs, reconnection, and duplicate suppression. LoRa, Zigbee, more boards, and per-dart ledger transactions remain extensions.
 
-## 6. Albuquerque build group
+## 6. Nerd Coffee LLC project team
 
-**On the slide:** Hardware/embedded owner: contacts, scoring, enclosure, and recovery. Chisel/verification owner: device identity, signing, publication, and retrieval. Web owner: public live/history page. Coordinator/hosts: equipment, sessions, venue, and follow-up. Potential starting points: CNM/FUSE, Quelab, and interested UNM participants.
+**On the slide:** Shannon, project manager: scope, task owners, schedule, and coordination. John Rigler: Chisel development and Denver outreach. Build contributors: hardware, scoring, signatures, and the public page. Venue hosts: access, operating arrangements, and local follow-up. Potential starting points: CNM/FUSE, Quelab, and interested UNM participants.
 
-**Speaking notes:** Roles can overlap. Start with available equipment and a build session. Colleges and makerspaces get a tangible project that spans electronics and software. Named organizations are potential collaborators, not confirmed partners. Invite teams only after the coordinator agrees on the first session and project scope.
+**Speaking notes:** Shannon manages the project under Nerd Coffee LLC. John contributes the Chisel work and the Denver demonstration. Shannon assigns owners for electronics, embedded scoring, signature verification, publication, and the public page. Roles can overlap. Start with available equipment and a build session. Colleges and makerspaces get a tangible project that spans electronics and software. Named organizations are potential collaborators, not confirmed partners. Invite teams only after Shannon agrees on the first session and project scope.
 
 ## 7. Milestone gates
 
 **On the slide:** Board selected and inputs understood. Real game logged and independently verified. Chisel publication and public viewing work. Rehearsal demonstrates interruption recovery. Hosts and event arrangements support the Denver session. Local participants can run a follow-up session.
 
-**Speaking notes:** Task 1 is the README and pitch. Advance by evidence rather than an invented calendar. The PM names owners and schedules each gate after inventory. Add radio work once the baseline path works. Keep the original project tracking issue open for implementation.
+**Speaking notes:** Task 1 is the README and pitch. Advance by evidence rather than an invented calendar. Shannon names owners and schedules each gate after inventory. Add radio work once the baseline path works. Keep the original project tracking issue open for implementation.
 
 ## 8. Acceptance demonstration
 
@@ -58,11 +58,11 @@ The proposal asks for a bounded prototype and named owners. It does not assume a
 
 **Speaking notes:** This is an independently organized outside event. We are not claiming an official ETHDenver session or venue endorsement. If radio adds value, select a direct LoRa link or a specifically arranged LoRaWAN deployment with the required gateway, servers, and backhaul. Budget and payload testing follow that choice. The pilot should still function if radio fails.
 
-## 10. Project-manager decision
+## 10. Nerd Coffee LLC next steps
 
-**On the slide:** Support one working prototype. Name task owners. Inventory one board and controller plus input electronics, power, enclosure, and test access. Set the parts budget and first build session after inventory. Agree on a review of the verified-game milestone.
+**On the slide:** One working prototype. Shannon coordinates the build and task owners. Inventory one board and controller plus input electronics, power, enclosure, and test access. Agree the parts budget after inventory. Review a game verified on an independent device.
 
-**Speaking notes:** Ask the project manager to make the first build concrete. John brings the project concept and up to one week in Denver. The requested next step is coordination of the prototype, with event commitments later. No spending estimate or deadline is asserted before choosing equipment and checking availability. The README and issue #1 hold the working plan.
+**Speaking notes:** Shannon makes the first build concrete for Nerd Coffee LLC, starting with equipment inventory, named task owners, and a build session. John contributes Chisel development and up to one week in Denver. The requested next step is coordination of the prototype, with event commitments later. No spending estimate or deadline is asserted before choosing equipment and checking availability. The README and issue #1 hold the working plan.
 
 ## Source material
 
