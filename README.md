@@ -90,3 +90,7 @@ Use the [GitHub coordination plan](docs/github-coordination.md) for the account 
 - [Implementation tracking issue](https://github.com/johnrigler/EthDenver/issues/1)
 
 The existing application files preserve earlier Web3, QR, and ledger experiments. The project outline and pitch add planning materials for this build. They do not change the existing application or establish that the proposed hardware or viewer has been tested.
+
+## ETHDenver 2027 coordination
+
+See [the integrated showcase plan](docs/ethdenver-2027-showcase.md) for the proposed physical dartboard demonstration, conference materials, optional Zorkmid/ Base integration, and delivery gates. These are plans, not claims that a token, venue, or showcase is live.
